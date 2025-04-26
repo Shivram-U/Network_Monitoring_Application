@@ -1,0 +1,25 @@
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+rel="stylesheet"
+/>
+<nav class="navbar navbar-expand-lg navbar-light bg-success p-0">
+  <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-4">
+          <a class="nav-link text-white fs-5" [routerLink]="['network-device-info', deviceId]" routerLinkActive="active">Network Device Info</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link text-white fs-5" [routerLink]="['network-device-interfaces', deviceId]" routerLinkActive="active">Network Device Interfaces</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="content-area bg-light">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+</script>

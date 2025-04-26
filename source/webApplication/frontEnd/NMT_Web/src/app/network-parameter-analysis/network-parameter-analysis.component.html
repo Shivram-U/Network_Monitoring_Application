@@ -1,0 +1,139 @@
+<!-- Bootstrap CSS CDN -->
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+rel="stylesheet"
+/>
+
+<style>
+/* Custom Styles for Green Theme */
+
+.title-bar {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border-radius: 0;
+    margin: 0;
+}
+
+.info-container
+{
+    max-width: 80%; /* Shrink width of the widget */
+    margin: 0 auto; /* Center align the widget */
+    padding: 0;
+}
+
+.info-container td {
+    text-align: center;
+    padding: 0px 0px; /* Decrease padding */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.info-container .label {
+    font-weight: bold;
+    color: #28a745; /* Distinctive green color for labels */
+}
+
+.info-container .value {
+    font-weight: normal;
+    color: #6c757d; /* Distinctive color for values */
+}
+
+.chart-container {
+    background-color: #ffffff; /* Pure white background */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: 2%; /* Increase padded space on left and right */
+    margin-right: 2%;
+    box-shadow: 0 80px 120px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-title {
+    background-color: #28a745; /* Green background for title */
+    color: #fff; /* White text */
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chart-container .dropdown-container {
+    text-align: right;
+    background-color: #467944;
+    border-radius: 10px;
+    padding:5px 5px;
+}
+
+.dropdown-container label {
+    color: #fff; /* White label text for dropdown */
+}
+
+/* Maintain h1 size */
+h1 {
+    font-size: 2rem !important; /* Set a fixed size */
+    font-weight: bold;
+    margin: 0;
+}
+</style>
+
+<!-- Title Bar -->
+<div class="bg-success text-white py-2 text-center title-bar">
+<h1 class="h4 mb-0">{{ parameterType | titlecase }} Analysis</h1>
+</div>
+
+<div class="container-fluid mt-4">
+<!-- Device and Interface Index Section -->
+<div class="bg-white border rounded shadow-sm p-3 info-container mb-4">
+    <table class="table table-borderless mb-0">
+    <tbody>
+        <tr>
+        <td class="label">Device ID</td>
+        <td class="value">{{ deviceId }}</td>
+        <td class="label">Interface Index</td>
+        <td class="value">{{ interfaceIndex }}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+<!-- First Chart Container -->
+<div class="chart-container mb-4">
+    <div class="chart-title d-flex justify-content-between align-items-center">
+    <span>{{ parameterType | titlecase }} Analysis</span>
+    </div>
+    
+    <div style="overflow-x: auto;" #chart>
+    <!-- Placeholder for Chart -->
+    </div>
+</div>
+
+<!-- Second Chart Container -->
+<div class="chart-container mb-4">
+    <div class="chart-title d-flex justify-content-between align-items-center">
+    <span>{{ parameterType | titlecase }} Complete Analysis</span>
+    <div class="dropdown-container">
+        <label for="aggregation" class="form-label text-white me-2 mb-0">Analysis Type</label>
+        <select
+        id="aggregation"
+        class="form-select form-select-sm d-inline-block w-auto"
+        [(ngModel)]="selectedAggregation"
+        (change)="onAggregationChange()"
+        >
+        <option value="avg">Average</option>
+        <option value="max">Maximum</option>
+        <option value="min">Minimum</option>
+        </select>
+    </div>
+    </div>
+    <div style="overflow-x: auto;" #metricChart>
+    <!-- Placeholder for Metric Chart -->
+    </div>
+</div>
+</div>
+
+<!-- Add Padding Space at Bottom -->
+<div style="height: 50px;"></div>
+
+<!-- Bootstrap Bundle with Popper (JS for interactive components like dropdowns) -->
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+</script>

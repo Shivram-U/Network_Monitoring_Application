@@ -1,0 +1,7 @@
+{
+    "/NetworkDeviceMonitoringApplication": {
+      "target": "http://localhost:8091",
+      "secure": false
+    }
+  }
+  

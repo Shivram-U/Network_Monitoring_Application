@@ -1,0 +1,5 @@
+Tools:
+    1. MIB Browser
+Commands:
+    1. sc query SNMP
+    2. javac -cp ".;C:\Software\Network_Monitoring_Tool\lib\snmp4j-2.8.18.jar" Network_Monitor.java ; java -cp ".;C:\Software\Network_Monitoring_Tool\lib\snmp4j-2.8.18.jar" Network_Monitor

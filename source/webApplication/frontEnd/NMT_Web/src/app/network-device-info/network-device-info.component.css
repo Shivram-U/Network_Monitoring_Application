@@ -1,0 +1,64 @@
+.device-info-container {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+    /* Light green background for better contrast */
+  color: #333;
+}
+
+.device-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+
+.device-info-table th,
+.device-info-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #b1b1b1;
+  
+}
+
+.device-info-table th {
+  background-color: #e6f5e6;  /* Light green header row */
+  color: #006d0b;  /* Dark green for headers */
+  font-weight: bold;
+}
+
+.device-info-table td {
+  color: #595959;  /* Darker gray for table content */
+}
+.device-info-table td:hover {
+  color: #000000;  /* Darker gray for table content */
+}
+
+.device-info-table tr {
+  background-color: #c9ffdb;
+}
+.device-info-table tr:hover {
+  background-color: #a3faca;  /* Soft green for hover effect */
+  cursor: pointer;
+}
+
+.loading-message {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.device-info-container {
+  animation: fadeIn 1s ease-in-out;
+}

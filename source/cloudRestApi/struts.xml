@@ -1,0 +1,127 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" 
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+<struts>     
+    <package name="default" namespace="/" extends="struts-default">
+    	
+    	<!-- Result Types -->
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult" />
+        </result-types>
+        <interceptors>
+		    <interceptor name="corsInterceptor" class="com.interceptor.CorsInterceptor"/>
+		    <interceptor-stack name="customStack">
+		        <interceptor-ref name="corsInterceptor"/>
+		        <interceptor-ref name="defaultStack"/>
+		    </interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="customStack"/>
+		
+    	<!-- Network Devices -->
+        <action name="networkDevices" class="com.actions.NetworkDevices" method="fetchNetworkDevicesData">
+            <result type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkDevice" class="com.actions.NetworkDevices" method="fetchNetworkDeviceData">
+        	<param name="deviceId"/>
+            <result type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        
+    	<!-- Network Device Interfaces -->
+        <action name="networkInterfaces" class="com.actions.NetworkDeviceInterfaces" method="fetchNetworkInterfacesData">
+        	<param name="deviceId"/>
+            <result type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkInterfacesWithinInterval" class="com.actions.NetworkDeviceInterfaces" method="fetchNetworkInterfacesData">
+        	<param name="deviceId"/>
+        	<param name="fromTime"/>
+            <param name="toTime"/>
+            <result type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkInterface" class="com.actions.NetworkDeviceInterfaces" method="fetchNetworkInterfaceData">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkInterfaceWithinInterval" class="com.actions.NetworkDeviceInterfaces" method="fetchNetworkInterfaceData">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <param name="fromTime"/>
+            <param name="toTime"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="deleteNetworkInterface" class="com.actions.NetworkDeviceInterfaces" method="clearNetworkInterfaceData">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name="updateNetworkInterfaceName" class="com.actions.NetworkDeviceInterfaces" method="updateNetworkInterfaceName">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <param name="interfaceName"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="getNetworkDevicesAndInterfaces" class="com.actions.NetworkDeviceInterfaces" method="fetchNetworkDeviceAndInterfaceIndices">
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkLatestInterface" class="com.actions.NetworkDeviceInterfaces" method="fetchLatestNetworkInterfaceData">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="networkDevicesLatestInterfacesData" class="com.actions.NetworkDeviceInterfaces" method="fetchLatestNetworkDeviceInterfacesData">
+            <param name="deviceId"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        
+        <action name="getSuspendedInterfacesDataByIp" class="com.actions.NetworkDeviceInterfaces" method="getSuspendedInterfacesByIp">
+        	<param name="ipAddress"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="getSuspendedInterfacesDataByDeviceId" class="com.actions.NetworkDeviceInterfaces" method="getSuspendedInterfacesByDeviceId">
+        	<param name="deviceId"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="addSuspendedInterface" class="com.actions.NetworkDeviceInterfaces" method="addSuspendedInterface">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+        <action name="removeSuspendedInterface" class="com.actions.NetworkDeviceInterfaces" method="removeSuspendedInterface">
+            <param name="deviceId"/>
+            <param name="interfaceIndex"/>
+            <result name="success" type="json">
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+    </package>
+</struts>

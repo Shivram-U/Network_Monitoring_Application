@@ -1,0 +1,921 @@
+{
+    "sysDescr": "HP J9851A Switch 5412Rzl2, revision KB.16.11.0021, ROM KB.16.01.0009 (/ws/swbuildm/rel_beluru_qaoff/code/build/bom(swbuildm_rel_beluru_qaoff_rel_beluru))",
+    "interfaces": {
+        "1336": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN87",
+            "outTraffic(bps)": 0
+        },
+        "1335": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN86",
+            "outTraffic(bps)": 0
+        },
+        "1334": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN85",
+            "outTraffic(bps)": 0
+        },
+        "1333": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN84",
+            "outTraffic(bps)": 0
+        },
+        "1332": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN83",
+            "outTraffic(bps)": 0
+        },
+        "1331": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN82",
+            "outTraffic(bps)": 0
+        },
+        "97": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 3675277139,
+            "discards(%)": 0,
+            "interfaceName": "D1",
+            "outTraffic(bps)": 2452426504
+        },
+        "98": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 37843096,
+            "discards(%)": 0.006019873515231284,
+            "interfaceName": "D2",
+            "outTraffic(bps)": 2798794577
+        },
+        "99": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 41563264,
+            "discards(%)": 0.00798282557816944,
+            "interfaceName": "D3",
+            "outTraffic(bps)": 1511909235
+        },
+        "1": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 64432530,
+            "discards(%)": 0.00794374160007553,
+            "interfaceName": "A1",
+            "outTraffic(bps)": 3092593625
+        },
+        "1502": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN253",
+            "outTraffic(bps)": 0
+        },
+        "2": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 155529433,
+            "discards(%)": 0.056056642216740414,
+            "interfaceName": "A2",
+            "outTraffic(bps)": 877855688
+        },
+        "3": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 34287492,
+            "discards(%)": 0.06807358580649471,
+            "interfaceName": "A3",
+            "outTraffic(bps)": 232243201
+        },
+        "1346": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN97",
+            "outTraffic(bps)": 0
+        },
+        "4": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 392966152,
+            "discards(%)": 0.009274514345251948,
+            "interfaceName": "A4",
+            "outTraffic(bps)": 4169612375
+        },
+        "1345": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN96",
+            "outTraffic(bps)": 0
+        },
+        "5": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1939290252,
+            "discards(%)": 0.0058491648490974464,
+            "interfaceName": "A5",
+            "outTraffic(bps)": 469532266
+        },
+        "6": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 38477107,
+            "discards(%)": 0.009211245797764197,
+            "interfaceName": "A6",
+            "outTraffic(bps)": 1491229114
+        },
+        "7": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 34676423,
+            "discards(%)": 0,
+            "interfaceName": "A7",
+            "outTraffic(bps)": 1145850194
+        },
+        "8": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1037642692,
+            "discards(%)": 0.003424948643052754,
+            "interfaceName": "A8",
+            "outTraffic(bps)": 1302888754
+        },
+        "129": {
+            "errors(%)": 2.0955600236612188E-4,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 31651506,
+            "discards(%)": 0,
+            "interfaceName": "E1",
+            "outTraffic(bps)": 594911315
+        },
+        "130": {
+            "errors(%)": 2.1290985310315008E-4,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 31647975,
+            "discards(%)": 0,
+            "interfaceName": "E2",
+            "outTraffic(bps)": 594908279
+        },
+        "131": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1498425562,
+            "discards(%)": 0.0030103090852416957,
+            "interfaceName": "E3",
+            "outTraffic(bps)": 1132002004
+        },
+        "132": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1344096662,
+            "discards(%)": 0.0032064819872999937,
+            "interfaceName": "E4",
+            "outTraffic(bps)": 1133790328
+        },
+        "133": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "E5",
+            "outTraffic(bps)": 0
+        },
+        "134": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "E6",
+            "outTraffic(bps)": 0
+        },
+        "135": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "E7",
+            "outTraffic(bps)": 0
+        },
+        "136": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "E8",
+            "outTraffic(bps)": 0
+        },
+        "33": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B1",
+            "outTraffic(bps)": 0
+        },
+        "34": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B2",
+            "outTraffic(bps)": 0
+        },
+        "35": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B3",
+            "outTraffic(bps)": 0
+        },
+        "36": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B4",
+            "outTraffic(bps)": 0
+        },
+        "37": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B5",
+            "outTraffic(bps)": 0
+        },
+        "38": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B6",
+            "outTraffic(bps)": 0
+        },
+        "39": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B7",
+            "outTraffic(bps)": 0
+        },
+        "3431": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2182",
+            "outTraffic(bps)": 0
+        },
+        "3430": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2181",
+            "outTraffic(bps)": 0
+        },
+        "2461": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1212",
+            "outTraffic(bps)": 0
+        },
+        "2460": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1211",
+            "outTraffic(bps)": 0
+        },
+        "1250": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "DEFAULT_VLAN",
+            "outTraffic(bps)": 0
+        },
+        "3426": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2177",
+            "outTraffic(bps)": 0
+        },
+        "2458": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1209",
+            "outTraffic(bps)": 0
+        },
+        "3425": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2176",
+            "outTraffic(bps)": 0
+        },
+        "2457": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1208",
+            "outTraffic(bps)": 0
+        },
+        "3424": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2175",
+            "outTraffic(bps)": 0
+        },
+        "2456": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1207",
+            "outTraffic(bps)": 0
+        },
+        "2455": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN1206",
+            "outTraffic(bps)": 0
+        },
+        "40": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B8",
+            "outTraffic(bps)": 0
+        },
+        "5207": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN3958",
+            "outTraffic(bps)": 0
+        },
+        "41": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B9",
+            "outTraffic(bps)": 0
+        },
+        "42": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B10",
+            "outTraffic(bps)": 0
+        },
+        "43": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B11",
+            "outTraffic(bps)": 0
+        },
+        "3429": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2180",
+            "outTraffic(bps)": 0
+        },
+        "44": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B12",
+            "outTraffic(bps)": 0
+        },
+        "45": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B13",
+            "outTraffic(bps)": 0
+        },
+        "46": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B14",
+            "outTraffic(bps)": 0
+        },
+        "47": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B15",
+            "outTraffic(bps)": 0
+        },
+        "48": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B16",
+            "outTraffic(bps)": 0
+        },
+        "49": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B17",
+            "outTraffic(bps)": 0
+        },
+        "3442": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2193",
+            "outTraffic(bps)": 0
+        },
+        "3441": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2192",
+            "outTraffic(bps)": 0
+        },
+        "3440": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2191",
+            "outTraffic(bps)": 0
+        },
+        "3439": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2190",
+            "outTraffic(bps)": 0
+        },
+        "3438": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2189",
+            "outTraffic(bps)": 0
+        },
+        "3437": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2188",
+            "outTraffic(bps)": 0
+        },
+        "3436": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2187",
+            "outTraffic(bps)": 0
+        },
+        "1499": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN250",
+            "outTraffic(bps)": 0
+        },
+        "1410": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN161",
+            "outTraffic(bps)": 0
+        },
+        "1498": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN249",
+            "outTraffic(bps)": 0
+        },
+        "3433": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2184",
+            "outTraffic(bps)": 0
+        },
+        "1497": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN248",
+            "outTraffic(bps)": 0
+        },
+        "3432": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2183",
+            "outTraffic(bps)": 0
+        },
+        "1496": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN247",
+            "outTraffic(bps)": 0
+        },
+        "50": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B18",
+            "outTraffic(bps)": 0
+        },
+        "51": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B19",
+            "outTraffic(bps)": 0
+        },
+        "52": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B20",
+            "outTraffic(bps)": 0
+        },
+        "53": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 853215958,
+            "discards(%)": 0,
+            "interfaceName": "B21",
+            "outTraffic(bps)": 665796573
+        },
+        "54": {
+            "errors(%)": 2.2814169969258745E-7,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 2757904170,
+            "discards(%)": 0.004995238562002433,
+            "interfaceName": "B22",
+            "outTraffic(bps)": 2501984757
+        },
+        "55": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B23",
+            "outTraffic(bps)": 0
+        },
+        "56": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "B24",
+            "outTraffic(bps)": 0
+        },
+        "5473": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 13470503,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 13418252
+        },
+        "5474": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "5475": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "5476": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "5477": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "3444": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2195",
+            "outTraffic(bps)": 0
+        },
+        "3443": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN2194",
+            "outTraffic(bps)": 0
+        },
+        "65": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 40198807,
+            "discards(%)": 0,
+            "interfaceName": "C1",
+            "outTraffic(bps)": 1578880624
+        },
+        "66": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 229514483,
+            "discards(%)": 0.10047427813220998,
+            "interfaceName": "C2",
+            "outTraffic(bps)": 108983097
+        },
+        "5481": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Out Of Band Management Port",
+            "outTraffic(bps)": 35293546
+        },
+        "67": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 25935288,
+            "discards(%)": 0,
+            "interfaceName": "C3",
+            "outTraffic(bps)": 1143366937
+        },
+        "68": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 51775166,
+            "discards(%)": 0.011534030126570673,
+            "interfaceName": "C4",
+            "outTraffic(bps)": 2868314311
+        },
+        "69": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1421609153,
+            "discards(%)": 0.004507735466286991,
+            "interfaceName": "C5",
+            "outTraffic(bps)": 1704905281
+        },
+        "5480": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "1437": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN188",
+            "outTraffic(bps)": 0
+        },
+        "1314": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN65",
+            "outTraffic(bps)": 0
+        },
+        "971": {
+            "errors(%)": 1.7690819844915162E-7,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 3611120128,
+            "discards(%)": 0.003873463974443658,
+            "interfaceName": "Trk10",
+            "outTraffic(bps)": 3172059004
+        },
+        "5478": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "70": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 25361877,
+            "discards(%)": 0.009289112646055519,
+            "interfaceName": "C6",
+            "outTraffic(bps)": 1491790572
+        },
+        "5479": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "Switch loopback interface",
+            "outTraffic(bps)": 0
+        },
+        "71": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 54652361,
+            "discards(%)": 0.0021925793182451755,
+            "interfaceName": "C7",
+            "outTraffic(bps)": 3617597912
+        },
+        "72": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1743857904,
+            "discards(%)": 9.992419440412374E-4,
+            "interfaceName": "C8",
+            "outTraffic(bps)": 3548854268
+        },
+        "1318": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN69",
+            "outTraffic(bps)": 0
+        },
+        "1317": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN68",
+            "outTraffic(bps)": 0
+        },
+        "5492": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 3330138,
+            "discards(%)": 0,
+            "interfaceName": "Out Of Band Management loopback Interface",
+            "outTraffic(bps)": 3330138
+        },
+        "5255": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN4006",
+            "outTraffic(bps)": 0
+        },
+        "1330": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN81",
+            "outTraffic(bps)": 0
+        },
+        "100": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 3693974863,
+            "discards(%)": 0.0026915655316899524,
+            "interfaceName": "D4",
+            "outTraffic(bps)": 1318795527
+        },
+        "101": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 56423956,
+            "discards(%)": 0.00425939850748634,
+            "interfaceName": "D5",
+            "outTraffic(bps)": 3952780623
+        },
+        "102": {
+            "errors(%)": 0,
+            "operationalStatus": "Down",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "D6",
+            "outTraffic(bps)": 0
+        },
+        "103": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1146066050,
+            "discards(%)": 0.020839123287793984,
+            "interfaceName": "D7",
+            "outTraffic(bps)": 859123872
+        },
+        "104": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 1677386109,
+            "discards(%)": 0.01640188456402685,
+            "interfaceName": "D8",
+            "outTraffic(bps)": 870266256
+        },
+        "1320": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN71",
+            "outTraffic(bps)": 0
+        },
+        "1329": {
+            "errors(%)": 0,
+            "operationalStatus": "Up",
+            "inTraffic(bps)": 0,
+            "discards(%)": 0,
+            "interfaceName": "VLAN80",
+            "outTraffic(bps)": 0
+        }
+    },
+    "recordTime": "2024-12-12T19:05:00.026",
+    "sysName": "TSI-NEW-CORE-2",
+    "sysLocation": "Tenkasi",
+    "sysObjectId": "1.3.6.1.4.1.11.2.3.7.11.161"
+}

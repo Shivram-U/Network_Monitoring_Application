@@ -1,0 +1,116 @@
+/* Header bar styling */
+*
+{
+  font-family: system-ui;
+}
+
+.header-bar {
+  background-color: #c8ffb4e3; /* Light green */
+  color: #000000;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: system-ui;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  border: none;
+  border-radius: 40%;
+  padding: 10px;
+  font-family: system-ui;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: aquamarine;
+}
+
+/* Input field styling */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Table styling */
+table {
+  color: #000000;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+thead th {
+  background-color: #ffffff;
+  color: #006d0b;
+  text-align: left;
+  padding:10px 20px;
+  padding-top: 0px;
+}
+
+tbody td {
+  padding:10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row coloring */
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff; /* White */
+}
+
+tbody tr:hover {
+  background-color: #e8f5e9; /* Slight green highlight on hover */
+}
+
+/* Links styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* IP Address addition section */
+.ip-address-addition {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ip-address-addition h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #006d0b;
+}
+
+.add-ip-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-ip-form button {
+  background-color: #006d0b;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.add-ip-form button:hover {
+  background-color: #007f10;
+}

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin : 0px;
+    padding : 0px;
+}
+html,body
+{
+    background-color: rgb(255, 255, 255);
+}
+svg
+{
+    font-family: Helvetica;
+    border-width: 10px;
+    border-color: black;
+    margin : 30px;
+    margin : 30px;
+    margin : 30px;
+    padding : 30px;
+    padding-top : 10px;
+    background-color: rgb(255, 255, 255);
+}

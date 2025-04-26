@@ -1,0 +1,42 @@
+<div class="container-fluid bg-white text-dark p-2">
+
+  <div *ngIf="deviceData; else loadingTemplate" class="table-responsive" style="overflow: hidden;height: 50vh;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;">
+    <table class="table p-2" style="border-radius: 20px; overflow: hidden;width:50%; border:1px solid rgb(206, 206, 206);">
+      <tr>
+        <th colspan="2" class="m-0" style="border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #28a745;">
+          <h2 class="text-white text-center mb-0 fs-5">Device Information</h2>
+        </th>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #e9ecef;">Device ID</th>
+        <td class="p-2" style="border: none; background-color: #e9ecef;">{{ deviceData.deviceId }}</td>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #f8f9fa;">System Name</th>
+        <td class="p-2" style="border: none; background-color: #f8f9fa;">{{ deviceData?.sysName }}</td>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #e9ecef;">System Description</th>
+        <td class="p-2" style="border: none; background-color: #e9ecef;">{{ deviceData?.sysDescr }}</td>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #f8f9fa;">System Location</th>
+        <td class="p-2" style="border: none; background-color: #f8f9fa;">{{ deviceData?.sysLocation }}</td>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #e9ecef;">System IP Address</th>
+        <td class="p-2" style="border: none; background-color: #e9ecef;">{{ deviceData?.ipAddress }}</td>
+      </tr>
+      <tr>
+        <th class="p-2" style="border: none; background-color: #f8f9fa;">System Object ID</th>
+        <td class="p-2" style="border: none; background-color: #f8f9fa;">{{ deviceData?.sysObjectId }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <ng-template #loadingTemplate>
+    <div class="text-center text-dark">
+      Loading device data...
+    </div>
+  </ng-template>
+</div>

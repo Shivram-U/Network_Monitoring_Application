@@ -1,0 +1,75 @@
+/* General container for form elements */
+
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    
+    color: #333;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+th {
+    background-color: #00ff91;  /* Green primary color */
+    color: rgb(72, 72, 72);
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+th:hover {
+    color: #000000;
+    background-color: #60ff7d;  /* Darker green */
+}
+label
+{
+    cursor: pointer;
+}
+
+td {
+    border-right: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+td:hover
+{
+    color: #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #dfffea;
+}
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #a2ffd5; 
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 10px 12px;
+    }
+}

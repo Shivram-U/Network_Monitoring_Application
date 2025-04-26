@@ -1,0 +1,753 @@
+{
+	"info": {
+		"_postman_id": "8762ad36-843c-470f-a0b8-dfc9e31fb215",
+		"name": "NetworkMonitoringTool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39013425"
+	},
+	"item": [
+		{
+			"name": "Network Devices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkDevices",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkDevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkDevice?deviceId=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkDevice"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Interfaces",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkInterfaces?deviceId=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkInterfaces"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Device Interval Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkInterfacesWithinInterval?deviceId=1&fromTime=2025-01-02T06:00:00Z&toTime=2025-01-02T18:00:00Z",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkInterfacesWithinInterval"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "fromTime",
+							"value": "2025-01-02T06:00:00Z"
+						},
+						{
+							"key": "toTime",
+							"value": "2025-01-02T18:00:00Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Interface",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkInterface?deviceId=1&interfaceIndex=2",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkInterface"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Interface Latest Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkLatestInterface?deviceId=1&interfaceIndex=2",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkLatestInterface"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Device Interfaces Latest Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkDevicesLatestInterfacesData?deviceId=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkDevicesLatestInterfacesData"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Interface Interval Data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/networkInterfaceWithinInterval?deviceId=1&interfaceIndex=2&fromTime=2025-01-02T06:00:00Z&toTime=2025-01-02T23:00:00Z",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"networkInterfaceWithinInterval"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "2"
+						},
+						{
+							"key": "fromTime",
+							"value": "2025-01-02T06:00:00Z"
+						},
+						{
+							"key": "toTime",
+							"value": "2025-01-02T23:00:00Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Network Interface",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/deleteNetworkInterface?deviceId=1&interfaceIndex=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"deleteNetworkInterface"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Network Interface Name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/updateNetworkInterfaceName?deviceId=1&interfaceIndex=1&interfaceName=updated name",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"updateNetworkInterfaceName"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "1"
+						},
+						{
+							"key": "interfaceName",
+							"value": "updated name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Network Devices And Interfaces data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/getNetworkDevicesAndInterfaces",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"getNetworkDevicesAndInterfaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add device API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NMT/NetworkDevices?ipAddress=172.17.48.20",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NMT",
+						"NetworkDevices"
+					],
+					"query": [
+						{
+							"key": "ipAddress",
+							"value": "172.17.48.20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove device API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NMT/NetworkDevices?ipAddress=172.17.48.20",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NMT",
+						"NetworkDevices"
+					],
+					"query": [
+						{
+							"key": "ipAddress",
+							"value": "172.17.48.20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get devices",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NMT/NetworkDevices",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NMT",
+						"NetworkDevices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "suspend interface",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/addSuspendedInterface?deviceId=1&interfaceIndex=2",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"addSuspendedInterface"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove suspended interface",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/removeSuspendedInterface?deviceId=1&interfaceIndex=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"removeSuspendedInterface"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						},
+						{
+							"key": "interfaceIndex",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get suspended interface by IP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/getSuspendedInterfacesDataByIp?ipAddress=172.17.48.2",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"getSuspendedInterfacesDataByIp"
+					],
+					"query": [
+						{
+							"key": "ipAddress",
+							"value": "172.17.48.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get suspended interface by Device Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Domain}}/NetworkDeviceMonitoringApplication/getSuspendedInterfacesDataByDeviceId?deviceId=1",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"NetworkDeviceMonitoringApplication",
+						"getSuspendedInterfacesDataByDeviceId"
+					],
+					"query": [
+						{
+							"key": "deviceId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Domain",
+			"value": "http://localhost:8091",
+			"type": "string"
+		}
+	]
+}

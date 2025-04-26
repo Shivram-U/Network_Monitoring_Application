@@ -1,0 +1,413 @@
+
+<div class="table-container">
+  <div class="interface-bar">
+    <div *ngIf="currentView === 'monitored'" class="time-range-selector mt-3">
+      <div class="form-group d-flex align-items-center">
+        <select 
+          id="time-range" 
+          class="form-select w-auto" 
+          [(ngModel)]="timeRange" 
+          (change)="updateData()">
+          <option value="0">Last polled</option>
+          <option value="1">Last 1 Hour</option>
+          <option value="3">Last 3 Hours</option>
+          <option value="6">Last 6 Hours</option>
+          <option value="12">Last 12 Hours</option>
+          <option value="24">Last 24 Hours</option>
+        </select>
+      </div>
+    </div>
+    
+    
+    <h3 >Interfaces</h3>
+    <div class="tags-container">
+      <button
+        class="tag-button"
+        [class.active]="currentView === 'monitored'"
+        (click)="currentView = 'monitored'"
+      >
+        Monitored 
+      </button>
+      <button
+        class="tag-button"
+        [class.active]="currentView === 'suspended'"
+        (click)="currentView = 'suspended'"
+      >
+        Suspended 
+      </button>
+    </div>
+  </div>
+  <table class="table table-borderless resizable-table">
+    <thead>
+      <tr class="">
+        <th>
+          <div class="d-flex align-items-center">
+            <label class="text-dark mb-0">Interface Name</label>
+              <button
+                *ngIf="sortField !== 'InterfaceName' || sortOrder !== 'asc'"
+                (click)="onSort('InterfaceName', 'asc')"
+                class="btn btn-link text-dark"
+              >
+                &#8593;
+              </button>
+              <button
+                *ngIf="sortField === 'InterfaceName' && sortOrder === 'asc'"
+                (click)="onSort('InterfaceName', 'desc')"
+                class="btn btn-link text-dark"
+              >
+                &#8595;
+              </button>
+          </div>
+        </th>
+        <th>
+          <div class="d-flex align-items-center">
+            <label class="text-dark mb-0">Index</label>
+              <button
+                *ngIf="sortField !== 'InterfaceIndex' || sortOrder !== 'asc'"
+                (click)="onSort('InterfaceIndex', 'asc')"
+                class="btn btn-link text-dark"
+              >
+                &#8593;
+              </button>
+              <button
+                *ngIf="sortField === 'InterfaceIndex' && sortOrder === 'asc'"
+                (click)="onSort('InterfaceIndex', 'desc')"
+                class="btn btn-link text-dark"
+              >
+                &#8595;
+              </button>
+          </div>
+        </th>
+        <th>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, 'in-Traffic']"
+            target="_blank"
+            class="text-primary text-decoration-underline"
+          >
+            <label class="btn-link m-0">In Traffic</label>
+          </a>
+            <button
+              *ngIf="sortField !== 'InterfaceData.inTraffic(bps)' || sortOrder !== 'asc'"
+              (click)="onSort('InterfaceData.inTraffic(bps)', 'asc')"
+              class="btn btn-link text-dark"
+            > 
+              &#8593;
+            </button>
+            <button
+              *ngIf="sortField === 'InterfaceData.inTraffic(bps)' && sortOrder === 'asc'"
+              (click)="onSort('InterfaceData.inTraffic(bps)', 'desc')"
+              class="btn btn-link text-dark"
+            >
+              &#8595;
+            </button>
+        </th>
+        <th>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, 'out-Traffic']"
+            target="_blank"
+            class="text-primary text-decoration-underline"
+          >
+          <label class="btn-link m-0">Out Traffic</label>
+          </a>
+            <button
+              *ngIf="sortField !== 'InterfaceData.outTraffic(bps)' || sortOrder !== 'asc'"
+              (click)="onSort('InterfaceData.outTraffic(bps)', 'asc')"
+              class="btn btn-link text-dark"
+            >
+              &#8593;
+            </button>
+            <button
+              *ngIf="sortField === 'InterfaceData.outTraffic(bps)' && sortOrder === 'asc'"
+              (click)="onSort('InterfaceData.outTraffic(bps)', 'desc')"
+              class="btn btn-link text-dark"
+            >
+              &#8595;
+            </button>
+        </th>
+        <th>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, 'errors']"
+            target="_blank"
+            class="text-primary text-decoration-underline"
+          >
+          <label class="btn-link m-0">Errors (%)</label>
+          </a>
+            <button
+              *ngIf="sortField !== 'InterfaceData.errors(%)' || sortOrder !== 'asc'"
+              (click)="onSort('InterfaceData.errors(%)', 'asc')"
+              class="btn btn-link text-dark"
+            >
+              &#8593;
+            </button>
+            <button
+              *ngIf="sortField === 'InterfaceData.errors(%)' && sortOrder === 'asc'"
+              (click)="onSort('InterfaceData.errors(%)', 'desc')"
+              class="btn btn-link text-dark"
+            >
+              &#8595;
+            </button>
+        </th>
+        <th>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, 'discards']"
+            target="_blank"
+            class="text-primary text-decoration-underline"
+          >
+          <label class="btn-link m-0">Discards (%)</label>
+          </a>
+            <button
+              *ngIf="sortField !== 'InterfaceData.discards(%)' || sortOrder !== 'asc'"
+              (click)="onSort('InterfaceData.discards(%)', 'asc')"
+              class="btn btn-link text-dark"
+            >
+              &#8593;
+            </button>
+            <button
+              *ngIf="sortField === 'InterfaceData.discards(%)' && sortOrder === 'asc'"
+              (click)="onSort('InterfaceData.discards(%)', 'desc')"
+              class="btn btn-link text-dark"
+            >
+              &#8595;
+            </button>
+        </th>
+        <th>
+          <label class="text-dark mb-0">Status</label>
+            <button
+              *ngIf="sortField !== 'InterfaceData.operationalStatus' || sortOrder !== 'asc'"
+              (click)="onSort('InterfaceData.operationalStatus', 'asc')"
+              class="btn btn-link text-dark"
+            >
+              &#8593;
+            </button>
+            <button
+              *ngIf="sortField === 'InterfaceData.operationalStatus' && sortOrder === 'asc'"
+              (click)="onSort('InterfaceData.operationalStatus', 'desc')"
+              class="btn btn-link text-dark"
+            >
+              &#8595;
+            </button>
+        </th>
+        <th>
+          <label class="text-dark mb-0">Actions</label>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let interface of (currentView === 'monitored' ? getInterfaceValues(monitoredInterfaces) : getInterfaceValues(suspendedInterfaces)) | sort: sortField : sortOrder === 'asc'">
+        <td>{{ interface.InterfaceName }}</td>
+        <td>{{ interface.InterfaceIndex }}</td>
+        <td>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, interface.InterfaceIndex, 'in-Traffic']"
+            target="_blank"
+            class="text-primary"
+          >
+            {{ autoConvertTraffic(interface.InterfaceData['inTraffic(bps)']) }}
+          </a>
+        </td>
+        <td>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, interface.InterfaceIndex, 'out-Traffic']"
+            target="_blank"
+            class="text-primary"
+          >
+            {{ autoConvertTraffic(interface.InterfaceData['outTraffic(bps)']) }}
+          </a>
+        </td>
+        <td>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, interface.InterfaceIndex, 'errors']"
+            target="_blank"
+            class="text-primary"
+          >
+            {{ interface.InterfaceData['errors(%)'].toFixed(3) }}
+          </a>
+        </td>
+        <td>
+          <a
+            [routerLink]="['/network-parameter-analysis', deviceId, interface.InterfaceIndex, 'discards']"
+            target="_blank"
+            class="text-primary"
+          >
+            {{ interface.InterfaceData['discards(%)'].toFixed(3) }}
+          </a>
+        </td>
+        <td>{{ interface.InterfaceData.operationalStatus }}</td>
+        <td style="position: relative; text-align: center; vertical-align: middle;">
+          <button
+            (click)="toggleMenu(interface, $event)"
+            class="btn p-0 action-button"
+          >
+            <span class="ham-menu"></span>
+          </button>
+          <div
+            *ngIf="interface.showMenu"
+            class="popup-menu"
+            (click)="$event.stopPropagation()"
+          >
+            <ul>
+              <li (click)="changeInterfaceName(interface)">Change Interface Name</li>
+              <li *ngIf="currentView == 'monitored'" (click)="suspendMonitoring(interface)">
+                Suspend Monitoring
+              </li>
+              <li *ngIf="currentView == 'suspended'" (click)="enableMonitoring(interface)">
+                Enable Monitoring
+              </li>
+            </ul>
+          </div>
+        </td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<style>
+
+.interface-bar {
+  background-color: #f8f9fa;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  /* Adjusted to center heading on left and container on right */
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.interface-bar h1
+{
+  color:#000000;
+}
+
+.tags-container {
+  width: fit-content;
+  background-color: #f1f1f1;
+  border : 1px solid black;
+  border-radius: 10px;
+  padding: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.tag-button {
+  padding: 4px 8px;
+  margin : 2px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.tag-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.tag-button:hover {
+  background-color: #e9ecef;
+}
+
+.ham-menu { display: inline-block; position: relative; margin: 0 0; } /* margin = (width-height)/2 */
+.ham-menu, .ham-menu::before, .ham-menu::after { width: 20px; height:3px; border-radius: 140px; background-color: black; }
+.ham-menu::before, .ham-menu::after { content: ""; display: block; position: absolute; }
+.ham-menu::before { bottom: 140%; } .ham-menu::after { top: 130%; }
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.action-button i {
+  font-size: 16px;
+  color: #6c757d; /* Neutral color */
+}
+
+.action-button:hover i {
+  color: #495057; /* Darker color on hover */
+}
+
+.popup-menu {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.popup-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.popup-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+}
+
+.popup-menu li:hover {
+  background: #f8f9fa;
+  color: #212529;
+}
+
+
+a
+{
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table.resizable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.resizable-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+table.resizable-table td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+table.resizable-table thead {
+  border-bottom: 2px solid #000; /* Border between header and rows */
+}
+
+table.resizable-table th {
+  resize: horizontal;
+  overflow: hidden;
+}
+
+table.resizable-table td {
+  white-space: nowrap;
+}
+
+</style>
